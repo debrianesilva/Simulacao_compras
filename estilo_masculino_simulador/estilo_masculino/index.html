@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estilo Masculino: roupas versáteis para todos os momentos.">
+    <title>Estilo Masculino | Minha Loja</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <a class="logo" href="index.html">ESTILO<span>.</span></a>
+        <nav aria-label="Navegação principal">
+            <a class="ativo" href="index.html">Masculino</a>
+            <a href="sobre.html">Sobre nós</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-conteudo">
+                <p class="etiqueta">MODA MASCULINA</p>
+                <h1>Seu estilo.<br><span>Suas escolhas.</span></h1>
+                <p>Peças versáteis, conforto e personalidade para acompanhar você em qualquer ocasião.</p>
+                <a class="botao botao-claro" href="#produtos">Conheça os produtos</a>
+            </div>
+
+            <div class="hero-detalhe" aria-hidden="true">
+                <div class="circulo circulo-um"></div>
+                <div class="circulo circulo-dois"></div>
+                <div class="hero-texto">VISTA<br>QUEM VOCÊ É.</div>
+            </div>
+        </section>
+
+        <section class="secao produtos-secao" id="produtos">
+            <div class="titulo-secao">
+                <p class="etiqueta">NOSSA SELEÇÃO</p>
+                <h2>Peças que fazem a diferença</h2>
+                <p>Escolha seus produtos e simule sua compra.</p>
+            </div>
+
+            <div class="produtos-grid">
+
+                <!-- CAMISETA -->
+                <article class="produto-card">
+                    <div class="produto-icone icone-camiseta"
+                         aria-hidden="true">
+                    </div>
+
+                    <div class="produto-info">
+                        <p class="categoria">CASUAL</p>
+                        <h3>Camiseta Essencial</h3>
+                        <p>Confortável e fácil de combinar, ideal para o dia a dia.</p>
+                        <strong>R$ 59,90</strong>
+                    </div>
+                </article>
+
+                <!-- CALÇA -->
+                <article class="produto-card">
+                    <div class="produto-icone icone-calca"
+                         aria-hidden="true">
+                    </div>
+
+                    <div class="produto-info">
+                        <p class="categoria">URBANO</p>
+                        <h3>Calça Jeans Clássica</h3>
+                        <p>Um modelo versátil para criar combinações modernas.</p>
+                        <strong>R$ 129,90</strong>
+                    </div>
+                </article>
+
+                <!-- JAQUETA -->
+                <article class="produto-card">
+                    <div class="produto-icone icone-jaqueta"
+                         aria-hidden="true">
+                    </div>
+
+                    <div class="produto-info">
+                        <p class="categoria">ESTILO</p>
+                        <h3>Jaqueta Urban</h3>
+                        <p>Uma camada extra de estilo para os dias mais frescos.</p>
+                        <strong>R$ 189,90</strong>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="simulador" id="simulador">
+            <div>
+                <p class="etiqueta">É FÁCIL COMPRAR</p>
+                <h2>Monte seu pedido</h2>
+                <p>Clique no botão e informe quantas unidades deseja de cada produto. Digite <strong>0</strong> se não quiser comprar um item.</p>
+                <p class="regra-desconto">
+                    ✨ Desconto especial: compras a partir de
+                    <strong>R$ 300,00</strong> recebem
+                    <strong>10% de desconto</strong>.
+                </p>
+            </div>
+
+            <button class="botao botao-principal"
+                    type="button"
+                    onclick="simularCompra()">
+                Simular compra
+            </button>
+        </section>
+
+        <section class="sobre-resumo secao">
+            <div>
+                <p class="etiqueta">QUEM SOMOS</p>
+                <h2>Moda com personalidade.</h2>
+            </div>
+
+            <div>
+                <p>A Estilo nasceu para mostrar que se vestir bem pode ser simples. Selecionamos peças versáteis que valorizam conforto, autenticidade e liberdade para cada pessoa expressar seu próprio jeito.</p>
+
+                <a class="link-seta" href="sobre.html">
+                    Conheça nossa história →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>© 2026 Estilo Masculino. Projeto acadêmico.</p>
+        <p>Desenvolvido por: <strong>Debriane da Silva Conceição</strong></p>
+    </footer>
+</body>
+</html>

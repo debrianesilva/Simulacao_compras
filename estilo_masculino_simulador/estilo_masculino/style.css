@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* ==========================================
+   2. VARIÁVEIS
+========================================== */
+
+:root {
+    --cor-primaria: #283747;
+    --cor-secundaria: #D8B89C;
+
+    --cor-fundo: #FAF8F5;
+    --cor-card: #FFFFFF;
+
+    --cor-texto: #252525;
+    --cor-texto-secundario: #777777;
+
+    --cor-borda: #E8E2DC;
+
+    --fonte-titulos: 'Poppins', 'Segoe UI', sans-serif;
+    --fonte-textos: 'Inter', 'Segoe UI', sans-serif;
+}
+
+
+/* ==========================================
+   3. CONFIGURAÇÕES GERAIS
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-textos);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* ==========================================
+   4. CABEÇALHO
+========================================== */
+
+.cabecalho {
+    min-height: 76px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background-color: var(--cor-card);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.logo {
+    color: var(--cor-primaria);
+    font: 800 25px var(--fonte-titulos);
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #B8754D;
+}
+
+.cabecalho nav {
+    display: flex;
+    gap: 30px;
+}
+
+.cabecalho nav a {
+    padding: 27px 0 23px;
+    border-bottom: 3px solid transparent;
+    color: #555555;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.cabecalho nav a:hover,
+.cabecalho nav a.ativo {
+    color: var(--cor-primaria);
+    border-color: var(--cor-secundaria);
+}
+
+
+/* ==========================================
+   5. HERO
+========================================== */
+
+.hero {
+    min-height: 470px;
+    padding: 65px 10%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 40px;
+    overflow: hidden;
+    background-color: var(--cor-primaria);
+    color: #FFFFFF;
+}
+
+.etiqueta {
+    color: #A66B47;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero .etiqueta,
+.sobre-hero .etiqueta {
+    color: #E9C6A8;
+}
+
+.hero h1,
+.sobre-hero h1 {
+    margin: 14px 0 18px;
+    font: 700 clamp(38px, 5vw, 62px)/1.12 var(--fonte-titulos);
+}
+
+.hero h1 span,
+.sobre-hero h1 span {
+    color: #E4C2A5;
+}
+
+.hero-conteudo > p:not(.etiqueta) {
+    max-width: 510px;
+    margin-bottom: 28px;
+    color: #E3E7EA;
+}
+
+
+/* ==========================================
+   6. BOTÕES
+========================================== */
+
+.botao {
+    display: inline-block;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 7px;
+    font: 600 14px var(--fonte-textos);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.95);
+}
+
+.botao-claro {
+    background-color: #FFFFFF;
+    color: var(--cor-primaria);
+}
+
+.botao-principal {
+    background-color: var(--cor-primaria);
+    color: #FFFFFF;
+}
+
+
+/* ==========================================
+   7. ELEMENTOS DECORATIVOS DO HERO
+========================================== */
+
+.hero-detalhe {
+    position: relative;
+    min-height: 300px;
+    display: grid;
+    place-items: center;
+}
+
+.circulo {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circulo-um {
+    width: 270px;
+    height: 270px;
+    background-color: var(--cor-secundaria);
+    opacity: 0.95;
+}
+
+.circulo-dois {
+    width: 210px;
+    height: 210px;
+    border: 2px solid rgba(40, 55, 71, 0.35);
+}
+
+.hero-texto {
+    position: relative;
+    z-index: 1;
+    color: var(--cor-primaria);
+    font: 800 28px/1.1 var(--fonte-titulos);
+    text-align: center;
+    transform: rotate(-8deg);
+}
+
+
+/* ==========================================
+   8. SEÇÕES GERAIS
+========================================== */
+
+.secao {
+    padding: 75px 9%;
+}
+
+.titulo-secao {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.titulo-secao h2,
+.sobre-resumo h2,
+.simulador h2,
+.sobre-bloco h2,
+.voltar h2 {
+    margin: 8px 0;
+    color: var(--cor-primaria);
+    font: 700 clamp(25px, 3vw, 36px) var(--fonte-titulos);
+}
+
+.titulo-secao > p:last-child {
+    color: var(--cor-texto-secundario);
+}
+
+
+/* ==========================================
+   9. CARDS DOS PRODUTOS
+========================================== */
+
+.produtos-grid {
+    width: 100%;
+    max-width: 1120px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.produto-card {
+    min-width: 0;
+    overflow: hidden;
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(40, 55, 71, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(40, 55, 71, 0.12);
+}
+
+
+/* ==========================================
+   10. IMAGENS DOS PRODUTOS (Caminho corrigido para a pasta public)
+========================================== */
+
+.produto-icone {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Camiseta */
+.icone-camiseta {
+    background-image: url("public/camisa.jpg");
+}
+
+/* Calça */
+.icone-calca {
+    background-image: url("public/calças.jpg");
+}
+
+/* Jaqueta */
+.icone-jaqueta {
+    background-image: url("public/jaqueta.jpg");
+}
+
+
+/* ==========================================
+   11. INFORMAÇÕES DOS PRODUTOS
+========================================== */
+
+.produto-info {
+    padding: 22px;
+}
+
+.categoria {
+    color: #A66B47;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.produto-info h3 {
+    margin: 5px 0;
+    color: var(--cor-primaria);
+    font: 600 19px var(--fonte-titulos);
+}
+
+.produto-info p:not(.categoria) {
+    min-height: 50px;
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+}
+
+.produto-info strong {
+    display: block;
+    margin-top: 13px;
+    color: var(--cor-primaria);
+    font-size: 19px;
+}
+
+
+/* ==========================================
+   12. SIMULADOR DE COMPRAS
+========================================== */
+
+.simulador {
+    margin: 0 9% 75px;
+    padding: 35px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background-color: #EDE7E0;
+    border-radius: 12px;
+}
+
+.simulador > div {
+    flex: 1;
+}
+
+.simulador p:not(.etiqueta) {
+    max-width: 690px;
+    color: #555555;
+}
+
+.regra-desconto {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   13. RESUMO SOBRE A LOJA
+========================================== */
+
+.sobre-resumo {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 50px;
+    background-color: var(--cor-card);
+}
+
+.sobre-resumo p:not(.etiqueta) {
+    color: var(--cor-texto-secundario);
+}
+
+.link-seta {
+    display: inline-block;
+    margin-top: 14px;
+    color: #8A5638;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.link-seta:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   14. RODAPÉ
+========================================== */
+
+.rodape {
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    background-color: var(--cor-primaria);
+    color: #FFFFFF;
+    font-size: 13px;
+}
+
+.rodape strong {
+    color: #E4C2A5;
+}
+
+
+/* ==========================================
+   15. PÁGINA SOBRE NÓS
+========================================== */
+
+.sobre-hero {
+    padding: 90px 10%;
+    background-color: var(--cor-primaria);
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.sobre-hero h1 {
+    font-size: clamp(35px, 5vw, 55px);
+}
+
+.sobre-hero > p:last-child {
+    color: #E3E7EA;
+}
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.sobre-bloco > p:last-child {
+    color: var(--cor-texto-secundario);
+}
+
+
+/* ==========================================
+   16. VALORES DA LOJA
+========================================== */
+
+.valores ul {
+    margin-top: 16px;
+    list-style: none;
+}
+
+.valores li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--cor-borda);
+    color: var(--cor-texto-secundario);
+}
+
+.valores li strong {
+    color: var(--cor-primaria);
+}
+
+
+/* ==========================================
+   17. SEÇÃO VOLTAR
+========================================== */
+
+.voltar {
+    padding: 55px 8%;
+    background-color: #EDE7E0;
+    text-align: center;
+}
+
+.voltar p {
+    margin: 8px 0 22px;
+    color: var(--cor-texto-secundario);
+}
+
+
+/* ==========================================
+   18. RESPONSIVIDADE - TABLETS
+========================================== */
+
+@media (max-width: 760px) {
+
+    .cabecalho {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+    }
+
+    .cabecalho nav {
+        gap: 18px;
+    }
+
+    .cabecalho nav a {
+        padding: 8px 0;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 55px 7%;
+    }
+
+    .hero-detalhe {
+        min-height: 230px;
+    }
+
+    .circulo-um {
+        width: 210px;
+        height: 210px;
+    }
+
+    .circulo-dois {
+        width: 165px;
+        height: 165px;
+    }
+
+    .produtos-grid {
+        grid-template-columns: 1fr;
+        max-width: 430px;
+    }
+
+    .simulador {
+        margin: 0 5% 50px;
+        padding: 28px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .sobre-resumo,
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .secao {
+        padding: 55px 7%;
+    }
+}
+
+
+/* ==========================================
+   19. RESPONSIVIDADE - CELULARES
+========================================== */
+
+@media (max-width: 430px) {
+
+    .cabecalho {
+        justify-content: center;
+    }
+
+    .cabecalho nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cabecalho nav a {
+        font-size: 13px;
+    }
+
+    .rodape {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .produto-icone {
+        height: 200px;
+    }
+
+    .simulador {
+        padding: 24px;
+    }
+
+    .botao {
+        max-width: 100%;
+    }
+}
